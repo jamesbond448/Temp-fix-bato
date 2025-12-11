@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Temp fix bato
 // @namespace    http://tampermonkey.net/
-// @version      1.00
+// @version      1.01
 // @description  Fix the current broken page on bato
 // @author       James
 // @license      MIT
@@ -68,12 +68,13 @@
 (function() {
     'use strict';
 
-    var images = document.getElementsByTagName('img');
+    var images;
 
     const regex = new RegExp("^https:\/\/k\\d\\d");//start with k00 (00 any number)
     const regex1 = new RegExp("^https:\/\/k");//To simply change the last letter from k to n
 
-    var timeoutId = setTimeout(_ => {
+    function fixImage(){
+        images = document.getElementsByTagName('img');
         for(var i = 0; i < images.length; i++) {
             if (images[i].naturalWidth === 0) {
                 if(images[i].src.match(regex)){
@@ -82,6 +83,14 @@
             }
         }
         images = null;
+    }
+
+    var timeoutId = setTimeout(_ => {
+        fixImage();
     }, 1000);//1 second dealy
+
+    var timeoutId1 = setTimeout(_ => {
+        fixImage();
+    }, 9000);//9 second dealy
 
 })();
