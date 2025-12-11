@@ -60,8 +60,8 @@
 // @match        https://wto.to/title/*
 // @match        https://bato.to/title/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bato.to
-// @downloadURL  https://raw.githubusercontent.com/jamesbond448/Temp-fix-bato/refs/heads/main/Temp_fix_bato.js
-// @updateURL    https://raw.githubusercontent.com/jamesbond448/Temp-fix-bato/refs/heads/main/Temp_fix_bato.js
+// @downloadURL  https://raw.githubusercontent.com/jamesbond448/Temp-fix-bato/refs/heads/main/Temp_fix_bato.user.js
+// @updateURL    https://raw.githubusercontent.com/jamesbond448/Temp-fix-bato/refs/heads/main/Temp_fix_bato.user.js
 // @grant        none
 // ==/UserScript==
 
